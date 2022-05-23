@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## blast rp
 
 You can use the [editor on GitHub](https://github.com/cbrown7752/blast-rp/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
