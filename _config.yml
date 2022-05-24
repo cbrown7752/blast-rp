@@ -3,7 +3,6 @@ title: "BLAST RP"
 description: "Blast Rp"
 url: https://echobot.xyz/docs
 markdown: kramdown
-theme: jekyll-theme-primer
 author: CulannDogGaming
 github:
   is_project_page: false
@@ -40,3 +39,5 @@ docs:
   
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll
