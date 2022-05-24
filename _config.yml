@@ -1,1 +1,44 @@
 theme: jekyll-theme-midnight
+title: "BLAST RP"
+description: "Blast Rp"
+url: https://echobot.xyz/docs
+markdown: kramdown
+theme: jekyll-theme-primer
+author: CulannDogGaming
+github:
+  is_project_page: false
+  
+  
+twitter:
+  username: echo_d_bot
+  card: summary
+  
+image:
+  path: https://blastrp.tk/blastrp.png
+  height: 100
+  width: 100
+  alt: png
+  
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: https://blastrp.tk/blastrp.png
+  
+
+docs_list_title: ACME Documentation
+docs:
+
+- title: Introduction
+  url: introduction.html
+
+- title: Configuration
+  url: configuration.html
+
+- title: Deployment
+  url: deployment.html
+  
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll
