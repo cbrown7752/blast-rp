@@ -1,3 +1,7 @@
+<center>
+    <img src="https://blastrp.tk/blastrp.png" alt="Smiley face" height="200" width="200">
+</center>
+
 ## blast rp
 
 You can use the [editor on GitHub](https://github.com/cbrown7752/blast-rp/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
