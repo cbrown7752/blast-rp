@@ -4,8 +4,6 @@ description: "Blast Rp"
 url: https://echobot.xyz/docs
 markdown: kramdown
 author: CulannDogGaming
-github:
-  is_project_page: false
   
   
 twitter:
@@ -36,6 +34,11 @@ docs:
 
 - title: Deployment
   url: deployment.html
+  
+ 
+ 
+github:
+  is_project_page: false
   
 plugins:
   - jekyll-seo-tag
