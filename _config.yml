@@ -1,14 +1,9 @@
 theme: jekyll-theme-midnight
 title: "BLAST RP"
 description: "Blast Rp"
-url: https://echobot.xyz/docs
+url: http://blastrp.tk
 markdown: kramdown
 author: CulannDogGaming
-  
-  
-twitter:
-  username: echo_d_bot
-  card: summary
   
 image:
   path: https://blastrp.tk/blastrp.png
