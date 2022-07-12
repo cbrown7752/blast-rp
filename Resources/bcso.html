@@ -69,17 +69,7 @@
         <nav>
           <ul>
             <li class="fork"><p>BLAST RP</p></li>
-            <select class="dropdown" onchange="window.location.href=this.value">
-
-        <option>Resources Pages</option>
-
-        <option value="bcso">BCSO</option>
-
-        <option value="civ">CIV</option>
-
-        <option value="fire">Fire</option>
-
-        </select>
+           
             
           </ul>
         </nav>
@@ -106,6 +96,21 @@
 </center>
 
 <h2 id="blast-rp">BCSO Resources</h2>
+        <form method="get" action="">
+ <input type="text" name="search" id="search" value="" /> 
+ <input type="submit" name="submit" value="Search" /> 
+</form>
+         <select class="dropdown" onchange="window.location.href=this.value">
+
+        <option>Resources Pages</option>
+
+        <option value="bcso">BCSO</option>
+
+        <option value="civ">CIV</option>
+
+        <option value="fire">Fire</option>
+
+        </select>
         <p><br></p>
         <h3>In Game Commands</h3>
         <p>/loadout | Get BCSO loadout</p>
