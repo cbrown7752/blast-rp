@@ -54,6 +54,12 @@
 <!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
 
 <!-- end custom head snippets -->
+    <style>
+      .dropdown {
+            background-color: #252525c4;
+            float: right;
+        }
+    </style>
 
   </head>
   <body>
@@ -71,6 +77,17 @@
       <section>
         <div id="title">
           <h1>BLAST RP</h1>
+          <select class="dropdown" onchange="window.location.href=this.value">
+
+        <option>Resources Pages</option>
+
+        <option value="bcso">BCSO</option>
+
+        <option value="civ">CIV</option>
+
+        <option value="fire">Fire</option>
+
+        </select>
           
           <hr>
           <span class="credits left">Project maintained by <a href="/discord.html">BLAST RP</a></span>
