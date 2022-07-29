@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="/assets/css/style.css?v=2ba2a4d99c5a6dc46b8724063f4bac6aa4499e4d">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="/assets/js/respond.js"></script>
+    <script src="jquery.min.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -119,9 +121,8 @@
 </center>
 
 <h2 id="blast-rp">BCSO Resources</h2>
-        <form method="get" action="">
- <input id="searchbar" onkeyup="search_game()" type="text" name="search" placeholder="Search Resources"/> 
-</form>
+        <input class="search" type="text" value="Search..."><img id="mglass" src="search.png">
+        
          <select class="dropdown" placeholder="Resources Pages" onchange="window.location.href=this.value">
         <option value="bcso">Resources Pages</option>
         <option value="bcso">BCSO</option>
