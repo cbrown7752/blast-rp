@@ -150,12 +150,16 @@
       </section>
 <script>
   $('#searchfor').keyup(function(){
-  var page = $('#all_text');
-  var pageText = page.text().replace("<span>","").replace("</span>");
+  var $page = $('#all_text a');
+
   var searchedText = $('#searchfor').val();
-  var theRegEx = new RegExp("("+searchedText+")", "igm");    
-  var newHtml = pageText.replace(theRegEx ,"<span>$1</span>");
-  page.html(newHtml);
+
+    $page.each(function(i,a){
+      $a = $(a);
+      $a.html($a.html().replace(/<span>/g,"").replace(/\<\/span\>/g,""));
+      var html = $a.text().replace(new RegExp("("+searchedText+")", "igm"), "<span>$1</span>");
+      $a.html(html);
+    });
 });
       </script>
     </div>
