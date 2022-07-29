@@ -64,7 +64,7 @@
       scroll-margin-top: 85px;
  }
       
-      #all_text span {
+      #all_text em {
   text-decoration: underline;
   background-color: yellow;
 }
@@ -149,17 +149,30 @@
 
       </section>
 <script>
-  $('#searchfor').keyup(function(){
-  var $page = $('#all_text a');
+  So I think the solution to your problem is that you need to get only the content of the anchors that you want to highlight. Here follows the jsfiddle: https://jsfiddle.net/kimaescobar/k83j7Lqv/1/ but basically I created a class in the anchors that is searchable than I get all searchable that are inside the all_text:
 
+Html
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+<input type="text" id="searchfor" />
+<ul id="all_text">
+  <li><a class="searchable" href="/somewhere">Somewhere</a></li>
+  <li><a class="searchable" href="/somewhere-else">Over there</a></li>
+</ul>
+<script>
+$('#searchfor').keyup(function(){
+  var $page = $('#all_text .searchable');
+  $page.each(function(i,a){
+        $a = $(a)
+      $a.html($a.html().replace(/<em>/g,"").replace(/\<\/em\>/g,""))
+    })
   var searchedText = $('#searchfor').val();
-
+  if(searchedText != ""){
     $page.each(function(i,a){
-      $a = $(a);
-      $a.html($a.html().replace(/<span>/g,"").replace(/\<\/span\>/g,""));
-      var html = $a.text().replace(new RegExp("("+searchedText+")", "igm"), "<span>$1</span>");
-      $a.html(html);
-    });
+      $a = $(a)
+      var html = $a.text().replace(new RegExp("("+searchedText+")", "igm"), "<em>$1</em>")
+      $a.html(html)
+    })
+  }
 });
       </script>
     </div>
