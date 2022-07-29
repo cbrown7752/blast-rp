@@ -94,11 +94,9 @@
 
 <h2 id="blast-rp">BCSO Resources</h2>
         <form method="get" action="">
- <input type="text" name="search" id="search" value="Search Resources" /> 
+ <inputid="searchbar" onkeyup="search_animal()" type="text" name="search" placeholder="Search Resources"/> 
 </form>
-         <select class="dropdown" onchange="window.location.href=this.value">
-
-        <option>Resources Pages</option>
+         <select class="dropdown" placeholder="Resources Pages" onchange="window.location.href=this.value">
         <option value="bcso">BCSO</option>
         <option value="civ">CIV</option>
         <option value="fire">Fire</option>
@@ -142,6 +140,7 @@
         <p>Male | s_m_y_sheriff_03</p>
           
         <ol>
+          <script src="./script.js"></script>
 
       </section>
 
