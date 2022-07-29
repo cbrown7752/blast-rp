@@ -41,6 +41,7 @@
 <meta name="theme-color" content="#353535">
 <meta name="msapplication-navbutton-color" content="#353535">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
 <!-- end theme color meta headers -->
 
 
@@ -63,7 +64,10 @@
       scroll-margin-top: 85px;
  }
       
-      
+      #all_text span {
+  text-decoration: underline;
+  background-color: yellow;
+}
      
 
     </style>
@@ -96,8 +100,7 @@
 </center>
 
 <h2 id="blast-rp">BCSO Resources</h2>
-        <input id="searchbar" onkeyup="search_game()" type="text"
-        name="search" placeholder="Search animals..">
+        <input type="text" id="searchfor" />
         
          <select class="dropdown" placeholder="Resources Pages" onchange="window.location.href=this.value">
         <option value="bcso">Resources Pages</option>
@@ -110,7 +113,7 @@
            <option value="#peds">BCSO Peds</option>
 
         </select>
-        
+        <ul id="all_text">
         <p><br></p>
         <h3 class="anchor" id="commands">In Game Commands</h3>
         <p>/loadout | Get BCSO loadout</p>
@@ -142,11 +145,19 @@
         <p>Male | s_m_y_sheriff_02</p>
         <p>Female | s_f_y_sheriff_02</p>
         <p>Male | s_m_y_sheriff_03</p>
-          
+          </ul>
 
       </section>
-
+<script>
+  $('#searchfor').keyup(function(){
+  var page = $('#all_text');
+  var pageText = page.text().replace("<span>","").replace("</span>");
+  var searchedText = $('#searchfor').val();
+  var theRegEx = new RegExp("("+searchedText+")", "igm");    
+  var newHtml = pageText.replace(theRegEx ,"<span>$1</span>");
+  page.html(newHtml);
+});
+      </script>
     </div>
   </body>
-  <script src="script.js"></script>
 </html>
