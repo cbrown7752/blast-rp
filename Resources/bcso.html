@@ -66,6 +66,28 @@
  }
       
       
+      #searchbar{
+     
+     border-radius: 10px;
+   }
+ 
+   input[type=text] {
+      width: 30%;
+      -webkit-transition: width 0.15s ease-in-out;
+      transition: width 0.15s ease-in-out;
+   }
+ 
+   /* When the input field gets focus,
+        change its width to 100% */
+   input[type=text]:focus {
+     width: 70%;
+   }
+
+ 
+.game{
+   display: list-item;    
+  } 
+      
 
     </style>
 
@@ -97,7 +119,8 @@
 </center>
 
 <h2 id="blast-rp">BCSO Resources</h2>
-        <input class="search" type="text" value="Search..."><img id="mglass" src="search.png">
+        <input id="searchbar" onkeyup="search_animal()" type="text"
+        name="search" placeholder="Search animals..">
         
          <select class="dropdown" placeholder="Resources Pages" onchange="window.location.href=this.value">
         <option value="bcso">Resources Pages</option>
@@ -112,36 +135,36 @@
         </select>
         <ol id='list'>
         <p><br></p>
-        <h3 class="anchor" id="commands">In Game Commands</h3>
-        <p>/loadout | Get BCSO loadout</p>
-        <p>/rack | Rack long rifle</p>
-        <p>/unrack | Rack long rifle</p>
-        <p>/name {Firstname} {Lastname} | Allows members to enter a firstname and a lastname into chat for it to automatically update in chat for them.</p>
-        <p>/department {so, hp, pd, fd, civ} | Allows members to select a department and it show in chat next to their name when they send a message.</p>
-        <p>/me {message} | Allows members to send messages over chat [Proximity]</p>
-        <p>/mer {message} | Allows members to send messages in red over chat [Proximity]</p>
-        <p>/ooc {message} | Allows members to send an "Out of Character" (OOC) message [Proximity]</p>
-        <p>/oocr {message} | Allows members to send a red "Out of Character" (OOC) message [Proximity]</p>
-        <p>/gooc {message} | Allows members to send an "Out of Character" (OOC) message [Global]</p>
-        <p>/dw {message} | Allows members to send an Anonymous message [Global]</p>
-        <p>/clear | Allows members to clear their chat (Client Sided)</p>
-        <p>/clearname | Allows members to reset their active name (Client Sided)</p>
-        <p>/cleardept | Allows members to reset their active department (Client Sided)</p>
-        <p>/clearhandle | Allows members to reset their active Twotter handles (Client Sided)</p>
+        <h3 class="anchor game" id="commands">In Game Commands</h3>
+        <p class="game">/loadout | Get BCSO loadout</p>
+        <p class="game">/rack | Rack long rifle</p>
+        <p class="game">/unrack | Rack long rifle</p>
+        <p class="game">/name {Firstname} {Lastname} | Allows members to enter a firstname and a lastname into chat for it to automatically update in chat for them.</p>
+        <p class="game">/department {so, hp, pd, fd, civ} | Allows members to select a department and it show in chat next to their name when they send a message.</p>
+        <p class="game">/me {message} | Allows members to send messages over chat [Proximity]</p>
+        <p class="game">/mer {message} | Allows members to send messages in red over chat [Proximity]</p>
+        <p class="game">/ooc {message} | Allows members to send an "Out of Character" (OOC) message [Proximity]</p>
+        <p class="game">/oocr {message} | Allows members to send a red "Out of Character" (OOC) message [Proximity]</p>
+        <p class="game">/gooc {message} | Allows members to send an "Out of Character" (OOC) message [Global]</p>
+        <p class="game">/dw {message} | Allows members to send an Anonymous message [Global]</p>
+        <p class="game">/clear | Allows members to clear their chat (Client Sided)</p>
+        <p class="game">/clearname | Allows members to reset their active name (Client Sided)</p>
+        <p class="game">/cleardept | Allows members to reset their active department (Client Sided)</p>
+        <pclass="game">/clearhandle | Allows members to reset their active Twotter handles (Client Sided)</p>
+        <p class="game"><br></p>
+        <h3 class="anchor game" id="cars">Car Spawn Codes</h3>
+        <p class="game">2014 Charger | CHARGER14</p>
+        <p class="game">2016 Charger | BCSOCharger</p>
+        <p class="game">2018 Charger | BCSO1</p>
+        <p class="game">2021 F-150 | BCSO3</p>
+        <p class="game">2018 Tahoe | BCSO4</p>
+        <p class="game">2018 FPIS | BCSO5</p>
+        <p class="game">CVPI | cvpihubsr</p>
         <p><br></p>
-        <h3 class="anchor" id="cars">Car Spawn Codes</h3>
-        <p>2014 Charger | CHARGER14</p>
-        <p>2016 Charger | BCSOCharger</p>
-        <p>2018 Charger | BCSO1</p>
-        <p>2021 F-150 | BCSO3</p>
-        <p>2018 Tahoe | BCSO4</p>
-        <p>2018 FPIS | BCSO5</p>
-        <p>CVPI | cvpihubsr</p>
-        <p><br></p>
-        <h3 class="anchor" id="peds">Ped  Spawn Codes</h3>
-        <p>Male | s_m_y_sheriff_02</p>
-        <p>Female | s_f_y_sheriff_02</p>
-        <p>Male | s_m_y_sheriff_03</p>
+        <h3 class="anchor game" id="peds">Ped  Spawn Codes</h3>
+        <p class="game">Male | s_m_y_sheriff_02</p>
+        <p class="game">Female | s_f_y_sheriff_02</p>
+        <p class="game">Male | s_m_y_sheriff_03</p>
           
         <ol>
           <script src="script.js"></script>
