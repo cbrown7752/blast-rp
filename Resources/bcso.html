@@ -64,7 +64,7 @@
       scroll-margin-top: 85px;
  }
       
-      #all_text em {
+      #all_text span {
   text-decoration: underline;
   background-color: yellow;
 }
@@ -151,19 +151,16 @@
 
 <script>
 $('#searchfor').keyup(function(){
-  var $page = $('#all_text .searchable');
-  $page.each(function(i,a){
-        $a = $(a)
-      $a.html($a.html().replace(/<em>/g,"").replace(/\<\/em\>/g,""))
-    })
+  var $page = $('#all_text p');
+
   var searchedText = $('#searchfor').val();
-  if(searchedText != ""){
+
     $page.each(function(i,a){
-      $a = $(a)
-      var html = $a.text().replace(new RegExp("("+searchedText+")", "igm"), "<em>$1</em>")
-      $a.html(html)
-    })
-  }
+      $p = $(p);
+      $p.html($a.html().replace(/<span>/g,"").replace(/\<\/span\>/g,""));
+      var html = $p.text().replace(new RegExp("("+searchedText+")", "igm"), "<span>$1</span>");
+      $p.html(html);
+    });
 });
       </script>
     </div>
