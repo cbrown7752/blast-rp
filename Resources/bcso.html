@@ -148,16 +148,7 @@
           </ul>
 
       </section>
-<script>
-  So I think the solution to your problem is that you need to get only the content of the anchors that you want to highlight. Here follows the jsfiddle: https://jsfiddle.net/kimaescobar/k83j7Lqv/1/ but basically I created a class in the anchors that is searchable than I get all searchable that are inside the all_text:
 
-Html
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
-<input type="text" id="searchfor" />
-<ul id="all_text">
-  <li><a class="searchable" href="/somewhere">Somewhere</a></li>
-  <li><a class="searchable" href="/somewhere-else">Over there</a></li>
-</ul>
 <script>
 $('#searchfor').keyup(function(){
   var $page = $('#all_text .searchable');
