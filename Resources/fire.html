@@ -12,8 +12,6 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Blast Rp" />
 <meta property="og:description" content="Blast Rp" />
-<link rel="canonical" href="https://echobot.xyz/docs/" />
-<meta property="og:url" content="https://echobot.xyz/docs/" />
 <meta property="og:site_name" content="BLAST RP" />
 <meta property="og:image" content="https://blastrp.tk/blastrp.png" />
 <meta property="og:type" content="website" />
@@ -43,6 +41,7 @@
 <meta name="theme-color" content="#353535">
 <meta name="msapplication-navbutton-color" content="#353535">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
 <!-- end theme color meta headers -->
 
 
@@ -54,6 +53,20 @@
 <!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
 
 <!-- end custom head snippets -->
+    <style>
+      .dropdown {
+            background-color: #353535;
+            border: 2px solid #ffcc00;
+            color: whitesmoke;
+        }
+      
+         .anchor:target {
+      scroll-margin-top: 85px;
+ }
+
+     
+
+    </style>
 
   </head>
   <body>
@@ -61,6 +74,7 @@
         <nav>
           <ul>
             <li class="fork"><p>BLAST RP</p></li>
+           
             
           </ul>
         </nav>
@@ -81,13 +95,41 @@
     <img src="https://blastrp.tk/blastrp.png" alt="Smiley face" height="200" width="200" />
 </center>
 
-<h2 id="blast-rp">Fire Resources</h2>
-        <p>Coming Soon</p>
+<h2 id="blast-rp">CIV Resources</h2>
+        
+         <select class="dropdown" placeholder="Resources Pages" onchange="window.location.href=this.value">
+        <option value="bcso">Resources Pages</option>
+        <option value="bcso">BCSO</option>
+        <option value="civ">CIV</option>
+        <option value="fire">Fire</option>
+        <option>__________</option>
+           <option value="#commands">CIV Commands</option>
+
+        </select>
+        <p><br></p>
+        <h3 class="anchor" id="commands">In Game Commands</h3>
+        <p>/name {Firstname} {Lastname} | Allows members to enter a firstname and a lastname into chat for it to automatically update in chat for them.</p>
+<p>/department {so, hp, pd, fd, civ} | Allows members to select a department and it show in chat next to their name when they send a message.</p>
+<p>/twthandle {username} | Allows members to create an custom Twotter/Twitter handle that will then be used in the command /twt.</p>
+<p>/twt {message} | Allows members to send a global message to other members on the server using Twotter/Twitter <strong>[Global]</strong></p>
+<p>/me {message} | Allows members to send messages over chat <strong>[Proximity]</strong></p>
+<p>/mer {message} | Allows members to send messages in red over chat <strong>[Proximity]</strong></p>
+<p>/ooc {message} | Allows members to send an &quot;Out of Character&quot; (OOC) message <strong>[Proximity]</strong></p>
+<p>/oocr {message} | Allows members to send a red &quot;Out of Character&quot; (OOC) message <strong>[Proximity]</strong></p>
+<p>/gooc {message} | Allows members to send an &quot;Out of Character&quot; (OOC) message <strong>[Global]</strong></p>
+<p>/dw {message} | Allows members to send an Anonymous message <strong>[Global]</strong></p>
+<p>/clear | Allows members to clear their chat <strong>(Client Sided)</strong></p>
+<p>/clearname | Allows members to reset their active name <strong>(Client Sided)</strong></p>
+<p>/cleardept | Allows members to reset their active department <strong>(Client Sided)</strong></p>
+<p>/clearhandle | Allows members to reset their active Twotter handles <strong>(Client Sided)</strong></p>
+        <h3 class="anchor" id="cars">Cars</h3>
+        <p>Ambulance | aambulance</p>
+        <p>Fire Truck | afiretruck</p>
+        <h3 class="anchor" id="cars">Peds</h3>
+        <p>Male | s_m_y_fireman_01_p</p>
         
 
-
       </section>
-
     </div>
   </body>
 </html>
