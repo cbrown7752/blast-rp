@@ -1,0 +1,19 @@
+body{
+    background-image: url(images/tabs-bg.jpg);
+    
+}
+
+header{
+    background-color: rgb(0, 0, 0,0.8);
+    
+}
+
+h1{
+    color: rgb(219, 138, 15);
+    text-align: center;
+    padding: 10px 10px;
+}
+#section_8{
+    background-color: rgb(0, 0, 0);
+    margin-top: 20px;
+}
